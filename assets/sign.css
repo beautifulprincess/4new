@@ -1,0 +1,80 @@
+section {
+  min-height: calc(100vh - 80px);
+}
+.sign-form-container {
+  text-align: center;
+  padding-top: 30px;
+}
+form {
+  width: 350px;
+  padding: 30px 22px 20px;
+  margin: 30px auto 20px;
+  border: solid 2px #2f57a6;
+}
+.signfrm-title {
+  font-size: 16pt;
+  color: #2f57a6;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+form input {
+  width: 100%;
+  border: solid 1px #2f57a6;
+  height: 40px;
+  padding-left: 30px;
+}
+form input[type=text] {
+  border-bottom: none;
+}
+form input[type=password] {
+  border-top: none;
+}
+form input[type=checkbox] {
+  width: 16px;
+  height: 16px;
+}
+form select {
+  width: 100%;
+  height: 40px;
+}
+label {
+  text-align: left;
+  margin: 20px auto 10px;
+}
+.forgot-link {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 14pt;
+}
+.forgot-link a {
+  color: #2f57a6;
+}
+.g-recaptcha {
+  width: 100%;
+}
+.btn-submit {
+  width: 100%;
+  font-size: 12pt;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  background-color: #2f57a6;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.sign-link {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 16pt;
+  text-transform: uppercase;
+}
+.sign-link a {
+  color: #2f57a6;
+}
+body {
+  color: #496cb1;
+}
