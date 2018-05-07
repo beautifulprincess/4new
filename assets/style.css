@@ -10,6 +10,30 @@
   font-family: "font3";
   src: url(webfonts/GOTHAM-LIGHT.TTF);
 }
+@font-face {
+  font-family: "font4";
+  src: url(webfonts/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: "font5";
+  src: url(webfonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "font6";
+  src: url(webfonts/Montserrat-Thin.ttf);
+}
+@font-face {
+  font-family: "font7";
+  src: url(webfonts/Lato-Bold.ttf);
+}
+@font-face {
+  font-family: "font8";
+  src: url(webfonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: "font9";
+  src: url(webfonts/Lato-Thin.ttf);
+}
 body {
   padding: 0;
   margin: 0;
