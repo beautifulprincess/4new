@@ -140,3 +140,9 @@ select:focus::-ms-value {
 /*.select-wrapper:before {
   pointer-events: none;
 }*/
+
+.col {
+  -webkit-flex-basis: unset;
+  -ms-flex-preferred-size: unset;
+  flex-basis: unset;
+}
