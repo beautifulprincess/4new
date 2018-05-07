@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("lib/functions.php");
 include("lib/db.php");
 if (isset($_REQUEST["action"]) && $_REQUEST["action"] == "signin") {

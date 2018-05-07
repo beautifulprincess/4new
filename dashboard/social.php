@@ -1,8 +1,8 @@
 <?php
 if ($_SERVER["SERVER_NAME"] == "localhost") {
-  $signWithReferralUrl = "http://localhost/4new/signup/" . $account["referralCode"];
+  $signWithReferralUrl = "{$_SERVER["REQUEST_SCHEME"]}://localhost/4new/signup/" . $account["referralCode"];
 } else {
-  $signWithReferralUrl = "http://18.204.177.229/signup/" . $account["referralCode"];
+  $signWithReferralUrl = "{$_SERVER["REQUEST_SCHEME"]}://{$_SERVER["SERVER_NAME"]}/signup/" . $account["referralCode"];
 }
 $referralAccounts = getAll("select * from `accounts` where referralFrom='{$account["referralCode"]}'");
 $referralAccountsCnt = count($referralAccounts);

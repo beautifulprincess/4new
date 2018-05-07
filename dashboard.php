@@ -1,4 +1,5 @@
 <?php
+session_start();
 $d = "../";
 $page  = isset($_REQUEST['page']) && $_REQUEST['page'] ? $_REQUEST['page'] : "social";
 $option  = isset($_REQUEST['option']) && $_REQUEST['option'] ? $_REQUEST['option'] : "";
