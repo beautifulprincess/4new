@@ -4,6 +4,12 @@ if ($_SERVER["SERVER_NAME"] == "localhost") {
 } else {
   $signWithReferralUrl = "http://18.204.177.229/signup/" . $account["referralCode"];
 }
+$referralAccounts = getAll("select * from `accounts` where referralFrom='{$account["referralCode"]}'");
+$referralAccountsCnt = count($referralAccounts);
+$mycoins = $referralAccountsCnt * 100;
+if ($account["referralFrom"]) {
+  $mycoins += 10;
+}
 ?>
 <div class="container-fluid">
   <h1>SOCIAL REWARDS</h1>
@@ -19,12 +25,12 @@ if ($_SERVER["SERVER_NAME"] == "localhost") {
         <div class="stats">
           <img src="<?=$d?>assets/images/icons/social-rewards-5_03.png" alt="">
           <h6>No. of Referrals</h6>
-          <span>0</span>
+          <span><?=$referralAccountsCnt?></span>
         </div>
         <div class="stats">
           <img src="<?=$d?>assets/images/icons/social-rewards-5_05.png" alt="">
           <h6>Coins Earned</h6>
-          <span>0</span>
+          <span><?=$mycoins?></span>
         </div>
       </div>
     </div>
@@ -48,8 +54,8 @@ if ($_SERVER["SERVER_NAME"] == "localhost") {
         <span><?=$account['referralCode']?></span>
         <h4 class="margin-top-20">Your referral link is:</h4>
         <div class="site">
-          <div class="site-name"><input type="text" id="referral-value" value="<?=$signWithReferralUrl?>"></div>
-          <button class="site-btn copy-referral"><img src="<?=$d?>assets/images/icons/book_70.png" alt=""></button>
+          <div class="site-name"><input type="text" id="referral-code" value="<?=$signWithReferralUrl?>"></div>
+          <button class="site-btn copy-clipboard" for="referral-code"><img src="<?=$d?>assets/images/icons/book_70.png" alt=""></button>
         </div>
       </div>
     </div>
@@ -60,7 +66,7 @@ if ($_SERVER["SERVER_NAME"] == "localhost") {
           <a href="http://twitter.com/share?text=Register+for+The+TokenPay+Coin+Sale+-+TokenPay+is+Bitcoin+on+Steroids%21&amp;url=<?=$signWithReferralUrl?>" target="_blank"><img src="<?=$d?>assets/images/icons/social-rewards-3_16.png" alt=""></a>
           <a href="https://www.facebook.com/sharer/sharer.php?u=<?=$signWithReferralUrl?>" target="_blank"><img src="<?=$d?>assets/images/icons/social-rewards-2_18.png" alt=""></a>
           <a href="https://www.facebook.com/sharer/sharer.php?u=<?=$signWithReferralUrl?>" target="_blank"><img src="<?=$d?>assets/images/icons/social-rewards-3_20.png" alt=""></a>
-          <a href="whatsapp://send?text=Register+for+The+TokenPay+Coin+Sale+-+TokenPay+is+Bitcoin+on+Steroids%21https%3A%2F%2Fwww.tokenpay.com%3Frc%<?=$account['referralCode']?>" target="_blank" data-action="share/whatsapp/share"><img src="<?=$d?>assets/images/icons/social-rewards-2_22.png" alt=""></a>
+          <a href="whatsapp://send?text=Register+for+The+TokenPay+Coin+Sale+-+TokenPay+is+Bitcoin+on+Steroids%21<?=urlencode($signWithReferralUrl)?>" target="_blank" data-action="share/whatsapp/share"><img src="<?=$d?>assets/images/icons/social-rewards-2_22.png" alt=""></a>
           <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<?=$signWithReferralUrl?>&amp;title=Register+for+The+TokenPay+Coin+Sale+-+TokenPay+is+Bitcoin+on+Steroids%21" target="_blank"><img src="<?=$d?>assets/images/icons/social-rewards-2_24.png" alt=""></a>
         </div>
       </div>
@@ -109,13 +115,9 @@ if ($_SERVER["SERVER_NAME"] == "localhost") {
               <h4>Image embed HTML:</h4>
               <div class="site">
                 <div class="site-name">
-                  <span class="referral-image-html">
-                    &lt;a href="<?=$signWithReferralUrl?>"&gt;
-&lt;img src="https://www.tokenpay.com/referral-images/3b8a508cf5cfc1b6d1cd95cad8747da9.png"
-alt="TokenPay Signup Offer"/&gt;
-&lt;/a&gt;
-                  </span>
-                  <button class="site-btn copy-embed-html"><img src="<?=$d?>assets/images/icons/book_70.png" alt=""></button>
+                  <textarea id="copy-embed-html" class="referral-image-html">&lt;a href="<?=$signWithReferralUrl?>"&gt;&lt;img src="https://www.tokenpay.com/referral-images/3b8a508cf5cfc1b6d1cd95cad8747da9.png"
+alt="TokenPay Signup Offer"/&gt;&lt;/a&gt;</textarea>
+                  <button class="site-btn copy-clipboard" for="copy-embed-html"><img src="<?=$d?>assets/images/icons/book_70.png" alt=""></button>
                 </div>
               </div>
             </div>
@@ -125,10 +127,8 @@ alt="TokenPay Signup Offer"/&gt;
               <h4>Image embed code:</h4>
               <div class="site">
                 <div class="site-name">
-                  <span class="referral-image-code">
-                    [url=https://www.tokenpay.com?rc=<?=$account['referralCode']?>][img]<span class="referral-image-link">https://www.tokenpay.com/referral-images/3b8a508cf5cfc1b6d1cd95cad8747da9.png</span>[/img][/url]
-                  </span>
-                  <button class="site-btn copy-embed-code"><img src="<?=$d?>assets/images/icons/book_70.png" alt=""></button>
+                  <textarea id="copy-embed-code" class="referral-image-code">[url=<?=$signWithReferralUrl?>][img]<span class="referral-image-link">https://www.tokenpay.com/referral-images/3b8a508cf5cfc1b6d1cd95cad8747da9.png</span>[/img][/url]</textarea>
+                  <button class="site-btn copy-clipboard" for="copy-embed-code"><img src="<?=$d?>assets/images/icons/book_70.png" alt=""></button>
                 </div>
               </div>
             </div>

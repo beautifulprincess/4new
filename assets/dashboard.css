@@ -195,12 +195,21 @@ p {
   line-height: 1;
   text-align: left;
 }
-.site-name input{
+.site-name input {
   width: 100%;
   height: 100%;
   border: 0;
 }
-.site-name input:focus{
+.site-name input:focus {
+  outline: none;
+}
+.site-name textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+}
+.site-name textarea:focus {
   outline: none;
 }
 button {
@@ -316,6 +325,9 @@ button {
   margin: 0px;
   line-height: 14pt;
   width: auto;
+}
+.downloadable-referral-image h6 {
+  text-align: center;
 }
 .ref-code {
   padding-top: 10px;

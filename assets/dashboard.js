@@ -4,8 +4,9 @@ $(document).ready(function() {
     var page = id.substring(id.lastIndexOf('-') + 1, id.length);
     document.location.href = d + 'dashboard/' + page;
   });
-  $(".copy-referral").click(function() {
-    var copyText = document.getElementById("referral-value");
+  $(".copy-clipboard").click(function() {
+    var textid = $(this).attr("for");
+    var copyText = document.getElementById(textid);
 		copyText.select();
 		document.execCommand("Copy");
   });

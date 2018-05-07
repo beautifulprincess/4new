@@ -1,6 +1,7 @@
 <?php
 include("lib/functions.php");
 include("lib/db.php");
+$referral = isset($_REQUEST["referral"]) ? $_REQUEST["referral"] : "";
 if (isset($_REQUEST["action"]) && $_REQUEST["action"] == "signup") {
   $accounts = getAll("select * from accounts where `email`='{$_REQUEST["email"]}'");
   if (count($accounts))
@@ -10,10 +11,9 @@ if (isset($_REQUEST["action"]) && $_REQUEST["action"] == "signup") {
     $accounts = getAll("select * from accounts where `referralCode`='$referralCode'");
     if (count($accounts) == 0) break;
   } while (true);
-  sql("INSERT INTO `accounts` (`email`, `firstname`, `lastname`, `password`, `country`, `referralCode`, `level`) VALUES ('{$_REQUEST["email"]}', '{$_REQUEST["firstname"]}', '{$_REQUEST["lastname"]}', '{$_REQUEST["password"]}', '{$_REQUEST["country"]}', '$referralCode', 1);");
+  sql("INSERT INTO `accounts` (`email`, `firstname`, `lastname`, `password`, `country`, `referralCode`, `referralFrom`, `level`) VALUES ('{$_REQUEST["email"]}', '{$_REQUEST["firstname"]}', '{$_REQUEST["lastname"]}', '{$_REQUEST["password"]}', '{$_REQUEST["country"]}', '$referralCode', '$referral', 1);");
   die(json_encode(array("res" => 200, msg => "Success")));
 }
-$referral = isset($_REQUEST["referral"]) ? $_REQUEST["referral"] : "";
 $d = "";
 if ($referral) $d = "../";
 ?>
