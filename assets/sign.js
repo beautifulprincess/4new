@@ -108,10 +108,10 @@ $(document).ready(function() {
       showMessage('error', 'Enter Pasword');
       return;
     }
-    if (grecaptcha.getResponse() == "") {
-      showMessage('error', 'Confirm not a robot');
-      return;
-    }
+    // if (grecaptcha.getResponse() == "") {
+    //   showMessage('error', 'Confirm not a robot');
+    //   return;
+    // }
     $('#frm-signin').attr('action', 'signin');
     hideMessage();
     $('#frm-signin').ajaxSubmit({
