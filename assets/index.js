@@ -50,4 +50,16 @@ $(document).ready(function() {
     setTimeout(updateCountdown, 1000);
   }
   updateCountdown();
+
+  function resizeCalc() {
+    var calch = $('#calc-invest').height() + 100;
+    var winw = $(window).width() + 10;
+    if (winw < 768) {
+      $('#calc-graph').css("height", 700 + "px");
+    } else {
+      $('#calc-graph').css("height", calch + "px");
+    }
+  }
+  resizeCalc();
+  $(window).resize(resizeCalc);
 });
