@@ -377,15 +377,3 @@ header {
 a:hover {
   text-decoration: none;
 }
-footer {
-  background-color: rgb(126, 192, 66);
-  height: auto;
-}
-.copyright {
-  color: rgb(28, 97, 135);
-}
-.footer-socials a {
-  font-size: 60px;
-  margin: 0 30px;
-  color: rgb(63, 68, 85);
-}

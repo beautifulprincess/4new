@@ -37,11 +37,11 @@ if ($referral) $d = "../";
     <div class="container sign-form-container">
       <div class="row">
         <div class="col col-sm-12">
-          <img src="<?=$d?>assets/images/4new-logo.png">
+          <img class="sign-logo" src="<?=$d?>assets/images/home-logo.png"> <span class="sign-logo-text">4NEW</span>
           <form id="frm-signup" method="post">
             <input type="hidden" name="action" value="signup">
             <input type="hidden" name="referral" value="<?=$referral?>">
-            <p class="signfrm-title">Signup new account</p>
+            <p class="signfrm-title">Sign up new account</p>
             <input type="text" name="firstname" id="firstname" placeholder="First Name" />
             <input type="text" name="lastname" id="lastname" placeholder="Last Name" />
             <input type="email" name="email" id="email" placeholder="Email Address" />
@@ -54,15 +54,15 @@ if ($referral) $d = "../";
             </label>
             <div class="g-recaptcha" data-sitekey="6Le9j1cUAAAAAIohkeM5WjH4SwEhjs5csrHxI8sq"></div>
             <div class="frm-message"></div>
-            <button type="button" class="btn-submit">Signup new account</button>
-            <p>Already have an account? <span class="sign-link"><a href="<?=$d?>signin">Sign in</a></span></p>
+            <button type="button" class="btn-submit">Sign up</button>
+            <p class="other-link">Already have an account? <span class="sign-link"><a href="<?=$d?>signin">Sign in</a></span></p>
           </form>
         </div>
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col col-sm-12">
+        <div class="col col-sm-12 disclaimer">
           <h6>Disclaimer</h6>
           <p>Nothing contained in the Site constitutes investment, legal or tax advice. Neither the information nor any opinion contained in the Site constitutes a solicitation or an offer to buy or sell any securities, futures, options or other financial instruments. Decisions based on information contained on this site are the sole responsibility of the visitor. The materials in the Site are provided “AS IS” and without warranties of any kind (either express or implied). To the fullest extent permissible pursuant to applicable law, any and all warranties, express or implied, including, but not limited to, implied warranties of merchantability and fitness for a particular purpose, are disclaimed.</p>
         </div>
