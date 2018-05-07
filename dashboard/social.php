@@ -59,7 +59,7 @@ if ($account["referralFrom"]) {
         </div>
       </div>
     </div>
-    <div class="col-lg-4 offset-lg-0 col-md-6 offset-md-3 col-xs-12">
+    <div class="col-lg-4 offset-lg-0 col-md-8 offset-md-2 col-xs-12">
       <div class="code third" style="height: 207px;">
         <h3>Share Your Referral Code!</h3>
         <div class="socials">
@@ -102,12 +102,12 @@ if ($account["referralFrom"]) {
             <span><?=$account['referralCode']?></span>
             <h6>My Referral Code</h6>
           </div>
-          <h2>Join the TokenPay token sale with this code and receive up to 50% additional TokenPay coins. </h2>
+          <h2>Join the TokenPay token sale with this code and receive up to 50% additional TokenPay coins.</h2>
           <h3>Visit TokenPay.com and click Join!</h3>
           <img src="<?=$d?>assets/images/icons/social-rewards_03.png" alt="">
         </div>
         <div class="download-btn">
-          <button class="download download-referral-image"><span class="fa fa-download"></span>Download image</button>
+          <button class="download download-referral-image"><span class="fa fa-download"></span> Download image</button>
         </div>
         <div class="row">
           <div class="col-md-6 col-xs-12">

@@ -3,7 +3,7 @@ header {
 }
 #header-logo {
   display: inline-block;
-  margin: 8px 30px 7px;
+  margin: 4px 30px;
   vertical-align: top;
 }
 .header-notice {
@@ -458,7 +458,7 @@ td {
     margin-bottom: 10px;
   }
 }
-@media (max-width: 989px) {
+@media (max-width: 1067px) {
   .refer, .information {
     height: 216px;
   }
@@ -466,7 +466,16 @@ td {
 @media (max-width: 767px) {
   .refer {
     height: auto;
-  } .information {
+  }
+  .information {
     height: 125px;
+  }
+  .header-notice {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  .header-user-email {
+    display: none;
   }
 }
