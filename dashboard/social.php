@@ -76,20 +76,20 @@ if ($account["referralFrom"]) {
     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
       <div class="data data-1" style="height: 631px;"> <img src="<?=$d?>assets/images/icons/social-rewards-4_03.png" alt="">
         <h2>EMAIL SOME PEOPLE</h2>
-        <form method="POST" action="https://www.tokenpay.com/internalapi/send-referrals" accept-charset="UTF-8" id="referral-form" class="top lef"><input name="_token" type="hidden" value="NYV8wupQB8bnvGhQq0NTURsb0mLzL6CQ5hxfUD0J">
+        <form method="POST" action="<?=$d?>sendreferral" accept-charset="UTF-8" id="referral-form">
           <div class="form-group">
             <label for="name">Your name:</label>
-            <input placeholder="Your name" name="name" type="text" value="Julia Fodor" id="name">
+            <input placeholder="Your name" name="name" type="text" value="<?=$account["firstname"]?> <?=$account["lastname"]?>" id="name">
           </div>
           <div class="form-group">
-            <input emails="" placeholder="(Separate multiple emails with commas)" name="emails" type="text">
+            <input id="emails" placeholder="(Separate multiple emails with commas)" name="emails" type="text">
           </div>
           <div class="form-group">
             <label for="message">Message:</label>
             <textarea name="message" cols="50" rows="10" id="message">I would like to share with you an amazing opportunity to get in ground floor on the hottest new crytpo asset called TPAY. It is the world’s most secure coin and has been called Bitcoin on Steroids. Register today and receive a 100% bonus on the official token sale on December 7th.</textarea>
           </div>
           <div class="download-btn">
-            <button class="download" type="submit"><span class="fa fa-envelope"></span> SEND INVITES</button>
+            <button class="download" id="send-referrals-btn" type="button"><span class="fa fa-envelope"></span> SEND INVITES</button>
           </div>
         </form>
       </div>

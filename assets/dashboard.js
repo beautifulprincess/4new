@@ -10,4 +10,30 @@ $(document).ready(function() {
 		copyText.select();
 		document.execCommand("Copy");
   });
+  $('#send-referrals-btn').click(function() {
+    var name = $('#name').val();
+    if (name.trim() == "") {
+      $('#name').select();
+      return;
+    }
+    var emails = $('#emails').val();
+    if (emails.trim() == "") {
+      $('#emails').select();
+      return;
+    }
+    var message = $('#message').val();
+    if (message.trim() == "") {
+      $('#message').select();
+      return;
+    }
+
+    $('#referral-form').ajaxSubmit({
+      error: function(xhr) {
+		    console.log('Error: ' + xhr.status);
+      },
+      success: function(response) {
+        console.log(response);
+      }
+	  });
+  });
 });

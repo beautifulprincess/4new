@@ -493,3 +493,18 @@ footer .footer-socials a{
   text-align: center;
   margin-top: 1px;
 }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #333;
+  /* font-style: italic; */
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #333;
+  /* font-style: italic; */
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #333;
+  /* font-style: italic; */
+}

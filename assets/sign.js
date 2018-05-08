@@ -119,7 +119,6 @@ $(document).ready(function() {
 		    console.log('Error: ' + xhr.status);
       },
       success: function(response) {
-        console.log(response);
         var resp = JSON.parse(response);
         if (resp.res == 200) {
           showMessage('success', resp.msg);

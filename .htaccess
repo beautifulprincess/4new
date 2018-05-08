@@ -8,6 +8,7 @@ RewriteRule ^dashboard/(.*)/(.*)$ dashboard.php?page=$1&option=$2 [L]
 RewriteRule ^dashboard/(.*)$ dashboard.php?page=$1 [L]
 RewriteRule ^dashboard$ dashboard.php [L]
 RewriteRule ^reset/(.*)$ reset.php?token=$1 [L]
+RewriteRule ^sendreferral$ sendreferral.php [L]
 
 ## EXPIRES CACHING ##
 <IfModule mod_expires.c>
