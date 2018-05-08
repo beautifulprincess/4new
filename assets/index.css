@@ -103,13 +103,13 @@ header {
   text-transform: uppercase;
 }
 #raised-col {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 .raised-title {
   font-family: 'font5';
   font-size: 24pt;
   font-style: italic;
-  color: #777;
+  color: #fff;
   margin-top: 40px;
 }
 .raised-bar-back {
@@ -140,17 +140,19 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 10pt;
+  font-size: 14pt;
 }
 .raised-var-value-progress {
   position: absolute;
   top: 0;
   left: calc(60% - 40px);
+  font-size: 14pt;
 }
 .raised-var-value-end {
   position: absolute;
   top: 0;
   right: 0;
+  font-size: 14pt;
 }
 #section-calculator {
   position: relative;
