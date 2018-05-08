@@ -148,7 +148,7 @@ alt="TokenPay Signup Offer"/&gt;&lt;/a&gt;</textarea>
     <img src="<?=$d?>assets/images/icons/social-rewards-6_03.png" alt="">
     <div class="table-head">
       <h2>FRIENDS YOU’VE REFERRED </h2>
-      <div class="number"> <span>0</span> </div>
+      <div class="number"> <span><?=$referralAccountsCnt?></span> </div>
     </div>
     <table class="main-table">
       <tbody>
@@ -157,6 +157,13 @@ alt="TokenPay Signup Offer"/&gt;&lt;/a&gt;</textarea>
           <th style="width:40%">Date</th>
           <th style="width:20%">Coins Earned</th>
         </tr>
+        <?php foreach ($referralAccounts as $referrer) { ?>
+        <tr class="">
+          <td><?=$referrer['firstname']?> <?=$referrer['lastname']?></td>
+          <td><?=substr($referrer['createdAt'], 0, 10)?></td>
+          <td>100</td>
+        </tr>
+        <?php } ?>
       </tbody>
     </table>
   </div>
