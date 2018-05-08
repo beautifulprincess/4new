@@ -21,4 +21,4 @@ sql("update `accounts` set `status`=1, `verifyHash`='' where `verifyHash`='$hash
 
 $_SESSION["accountid"] = $account["id"];
 
-header("Location: ../socialreword");
+header("Location: ../socialreward");

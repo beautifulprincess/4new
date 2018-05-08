@@ -526,6 +526,9 @@ td {
     display: none;
   }
 }
+@media (min-width: 1200px) {
+  
+}
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #333;
   /* font-style: italic; */

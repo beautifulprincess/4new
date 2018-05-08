@@ -180,8 +180,7 @@ if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
                   <h4>Image embed HTML:</h4>
                   <div class="site">
                     <div class="site-name">
-                      <textarea id="copy-embed-html" class="referral-image-html">&lt;a href="<?=$signWithReferralUrl?>"&gt;&lt;img src="<?=$baseurl?>referrals/<?=md5($account['email'])?>.png"
-    alt="TokenPay Signup Offer"/&gt;&lt;/a&gt;</textarea>
+                      <textarea id="copy-embed-html" class="referral-image-html">&lt;a href="<?=$signWithReferralUrl?>"&gt;&lt;img src="<?=$baseurl?>referrals/<?=md5($account['email'])?>.png" alt="TokenPay Signup Offer"/&gt;&lt;/a&gt;</textarea>
                       <button class="site-btn copy-clipboard" for="copy-embed-html"><img src="<?=$d?>assets/images/icons/book_70.png" alt=""></button>
                     </div>
                   </div>
