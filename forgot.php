@@ -1,17 +1,21 @@
 <?php
-session_start();
 include("lib/functions.php");
 include("lib/db.php");
-if (isset($_REQUEST["action"]) && $_REQUEST["action"] == "signin") {
+
+$baseurl = "{$_SERVER["REQUEST_SCHEME"]}://{$_SERVER["SERVER_NAME"]}/";
+if ($_SERVER["SERVER_NAME"] == "localhost") $baseurl .= "4new/";
+
+if (isset($_REQUEST["action"]) && $_REQUEST["action"] == "send") {
   $accounts = getAll("select * from accounts where `email`='{$_REQUEST["email"]}'");
   if (count($accounts) == 0)
-    die(json_encode(array("res" => 300, "msg" => "Email is not exist or incorrect password.")));
-  else if ($accounts[0]["password"] != $_REQUEST["password"])
-    die(json_encode(array("res" => 301, "msg" => "Email is not exist or incorrect password.")));
+    die(json_encode(array("res" => 300, "msg" => "Email is not exist.")));
   if ($accounts[0]["status"] == 0)
     die(json_encode(array("res" => 304, "msg" => "Email unverified. Please check your email.")));
-  $_SESSION["accountid"] = $accounts[0]["id"];
-  die(json_encode(array("res" => 200, msg => "Success")));
+  $verifyHash = substr(base64_encode(md5($_REQUEST["email"] . time())), 1, -2);
+  $verifyEmail = $_REQUEST["email"];
+  sql("update `accounts` set `verifyHash`='$verifyHash' where `email`='$verifyEmail';");
+  include("sendResetEmail.php");
+  die(json_encode(array("res" => 200, msg => "Successfully send, please check your email.")));
 }
 ?>
 <!DOCTYPE html>
@@ -36,17 +40,14 @@ if (isset($_REQUEST["action"]) && $_REQUEST["action"] == "signin") {
         <div class="col col-sm-12">
           <img class="sign-logo" src="assets/images/home-logo.png">
           <div id="signin-logo-txt">4NEW</div>
-          <form id="frm-signin" method="post">
-            <input type="hidden" name="action" value="signin">
-            <p class="signfrm-title">Log in your account</p>
+          <form id="frm-forgot" method="post">
+            <input type="hidden" name="action" value="send">
+            <p class="signfrm-title">Forgot your password?</p>
             <input type="email" name="email" id="email" placeholder="Email Address" />
-            <input type="password" name="password" id="password" placeholder="Password" />
-            <p class="forgot-link"><a href="forgot">Forgot your password?</a></p>
             <!-- <div class="g-recaptcha" data-sitekey="6Le9j1cUAAAAAIohkeM5WjH4SwEhjs5csrHxI8sq"></div> -->
             <div class="frm-message"></div>
-            <button type="button" class="btn-submit">LOG IN</button>
-            <p>Don't you have an account?</p>
-            <p class="sign-link"><a href="signup">Sign up</a></p>
+            <button type="button" class="btn-submit">Send email</button>
+            <p class="sign-link"><a href="signin">Sign in</a> | <a href="signup">Sign up</a></p>
           </form>
         </div>
       </div>

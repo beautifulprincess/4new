@@ -384,3 +384,17 @@ header {
 a:hover {
   text-decoration: none;
 }
+#index-video1 {
+  background-color: transparent;
+  background-image: url(images/video1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#index-video2 {
+  background-color: transparent;
+  background-image: url(images/video2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

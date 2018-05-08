@@ -37,7 +37,7 @@ $(document).ready(function() {
     }
     if (!re.test($('#email').val().toLowerCase()))
     {
-      $('#signup-email').select();
+      $('#email').select();
       showMessage('error', 'Invalid email');
       return;
     }
@@ -47,12 +47,12 @@ $(document).ready(function() {
       return;
     }
     if ($('#password').val().length < 6) {
-      $('#signup-password').focus();
+      $('#password').focus();
       showMessage('error', 'Password must be 6 characters minimum!');
       return;
     }
     if (!letter.test($('#password').val()) || !number.test($('#password').val())) {
-      $('#signup-password').focus();
+      $('#password').focus();
       showMessage('error', 'Password must include a letter and number!');
       return;
     }
@@ -129,6 +129,86 @@ $(document).ready(function() {
         if (resp.res == 200) {
           showMessage('success', resp.msg);
           document.location.href = "dashboard";
+        } else {
+          showMessage('error', resp.msg);
+        }
+      }
+	  });
+  });
+
+  $('#frm-forgot .btn-submit').click(function() {
+    if ($('#email').val().trim() == '') {
+      $('#email').select();
+      showMessage('error', 'Enter Email Address');
+      return;
+    }
+    // if (grecaptcha.getResponse() == "") {
+    //   showMessage('error', 'Confirm not a robot');
+    //   return;
+    // }
+    $('#frm-forgot').attr('action', 'forgot');
+    hideMessage();
+    $('#loading-container').show();
+    $('#frm-forgot').ajaxSubmit({
+      error: function(xhr) {
+        $('#loading-container').hide();
+		    console.log('Error: ' + xhr.status);
+      },
+      success: function(response) {
+        var resp = JSON.parse(response);
+        $('#loading-container').hide();
+        if (resp.res == 200) {
+          // showMessage('success', resp.msg);
+        } else {
+          showMessage('error', resp.msg);
+        }
+      }
+	  });
+  });
+
+  $('#frm-reset .btn-submit').click(function() {
+    if ($('#password').val() == '') {
+      $('#password').select();
+      showMessage('error', 'Enter Pasword');
+      return;
+    }
+    if ($('#password').val().length < 6) {
+      $('#password').focus();
+      showMessage('error', 'Password must be 6 characters minimum!');
+      return;
+    }
+    if (!letter.test($('#password').val()) || !number.test($('#password').val())) {
+      $('#password').focus();
+      showMessage('error', 'Password must include a letter and number!');
+      return;
+    }
+    if ($('#cnf-password').val() == '') {
+      $('#cnf-password').select();
+      showMessage('error', 'Enter Confirm Password');
+      return;
+    }
+    if ($('#password').val() != $('#cnf-password').val()) {
+      $('#password').select();
+      showMessage('error', 'Dismatch passwords');
+      return;
+    }
+    // if (grecaptcha.getResponse() == "") {
+    //   showMessage('error', 'Confirm not a robot');
+    //   return;
+    // }
+    $('#frm-reset').attr('action', 'reset');
+    hideMessage();
+    $('#loading-container').show();
+    $('#frm-reset').ajaxSubmit({
+      error: function(xhr) {
+        $('#loading-container').hide();
+		    console.log('Error: ' + xhr.status);
+      },
+      success: function(response) {
+        $('#loading-container').hide();
+        var resp = JSON.parse(response);
+        if (resp.res == 200) {
+          document.location.href = "../signin";
         } else {
           showMessage('error', resp.msg);
         }

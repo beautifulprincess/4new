@@ -13,7 +13,7 @@ if (!$hash) {
 }
 
 $account = getOne("select * from accounts where `verifyHash`='$hash'");
-debug($account);
+
 if (!$account)
   die("Don't recognized the verification code! Please check again your mailbox.");
 

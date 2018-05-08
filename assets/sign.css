@@ -15,6 +15,8 @@ form {
   margin-top: 0px;
   margin-bottom: 10px;
 }
+form#frm-forgot input,
+form#frm-reset input,
 form#frm-signin input {
   width: 100%;
   border: none;
@@ -55,6 +57,10 @@ form#frm-signup select option:disabled {
 form#frm-signup input[type=checkbox] {
   width: 16px;
   height: 16px;
+}
+form#frm-forgot .btn-submit,
+form#frm-reset .btn-submit{
+  margin-top: 30px;
 }
 label {
   text-align: left;

@@ -68,12 +68,12 @@ if ($_SERVER["SERVER_NAME"] == "localhost") $baseurl .= "4new/";
       <div id="home-subtitle">Decentraiazed solutions</div>
       <div class="row">
         <div class="col col-sm-12 col-md-6">
-          <video controls poster="<?=$d?>assets/images/video1.png">
+          <video controls id="index-video1" poster="data:image/gif,AAAA">
             <source src="<?=$d?>assets/latest-drone.mp4" type="video/mp4">
           </video>
         </div>
         <div class="col col-sm-12 col-md-6">
-          <video controls poster="<?=$d?>assets/images/video2.png">
+          <video controls id="index-video2" poster="data:image/gif,AAAA">
             <source src="<?=$d?>assets/latest-drone.mp4" type="video/mp4">
           </video>
         </div>
