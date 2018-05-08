@@ -8,6 +8,8 @@ if (isset($_REQUEST["action"]) && $_REQUEST["action"] == "signin") {
     die(json_encode(array("res" => 300, "msg" => "Email is not exist or incorrect password.")));
   else if ($accounts[0]["password"] != $_REQUEST["password"])
     die(json_encode(array("res" => 301, "msg" => "Email is not exist or incorrect password.")));
+  if ($accounts[0]["status"] == 0)
+    die(json_encode(array("res" => 304, "msg" => "Email unverified. Please check your email.")));
   $_SESSION["accountid"] = $accounts[0]["id"];
   die(json_encode(array("res" => 200, msg => "Success")));
 }

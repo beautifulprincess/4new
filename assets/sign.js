@@ -82,12 +82,15 @@ $(document).ready(function() {
     }
     $('#frm-signup').attr('action', 'signup');
     hideMessage();
+    $('#loading-container').show();
     $('#frm-signup').ajaxSubmit({
       error: function(xhr) {
+        $('#loading-container').hide();
 		    console.log('Error: ' + xhr.status);
       },
       success: function(response) {
         var resp = JSON.parse(response);
+        $('#loading-container').hide();
         if (resp.res == 200) {
           showMessage('success', resp.msg);
         } else {
@@ -114,12 +117,15 @@ $(document).ready(function() {
     // }
     $('#frm-signin').attr('action', 'signin');
     hideMessage();
+    $('#loading-container').show();
     $('#frm-signin').ajaxSubmit({
       error: function(xhr) {
+        $('#loading-container').hide();
 		    console.log('Error: ' + xhr.status);
       },
       success: function(response) {
         var resp = JSON.parse(response);
+        $('#loading-container').hide();
         if (resp.res == 200) {
           showMessage('success', resp.msg);
           document.location.href = "dashboard";

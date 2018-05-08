@@ -15,8 +15,6 @@ if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
   $referralCode = $account['referralCode'];
   include("./create_referral_png.php");
 }
-$baseurl = "{$_SERVER["REQUEST_SCHEME"]}://{$_SERVER["SERVER_NAME"]}/";
-if ($_SERVER["SERVER_NAME"] == "localhost") $baseurl .= "4new/"
 ?>
 <div class="container-fluid">
   <h1>SOCIAL REWARDS</h1>

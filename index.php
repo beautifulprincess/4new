@@ -2,7 +2,7 @@
 $d = "";
 if ($section == "reset") $d = "../";
 $baseurl = "{$_SERVER["REQUEST_SCHEME"]}://{$_SERVER["SERVER_NAME"]}/";
-if ($_SERVER["SERVER_NAME"] == "localhost") $baseurl .= "4new/"
+if ($_SERVER["SERVER_NAME"] == "localhost") $baseurl .= "4new/";
 ?>
 <!DOCTYPE html>
 <html>

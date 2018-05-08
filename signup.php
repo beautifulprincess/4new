@@ -1,6 +1,10 @@
 <?php
 include("lib/functions.php");
 include("lib/db.php");
+
+$baseurl = "{$_SERVER["REQUEST_SCHEME"]}://{$_SERVER["SERVER_NAME"]}/";
+if ($_SERVER["SERVER_NAME"] == "localhost") $baseurl .= "4new/";
+
 $referral = isset($_REQUEST["referral"]) ? $_REQUEST["referral"] : "";
 if (isset($_REQUEST["action"]) && $_REQUEST["action"] == "signup") {
   $accounts = getAll("select * from accounts where `email`='{$_REQUEST["email"]}'");
@@ -11,9 +15,12 @@ if (isset($_REQUEST["action"]) && $_REQUEST["action"] == "signup") {
     $accounts = getAll("select * from accounts where `referralCode`='$referralCode'");
     if (count($accounts) == 0) break;
   } while (true);
-  sql("INSERT INTO `accounts` (`email`, `firstname`, `lastname`, `password`, `country`, `referralCode`, `referralFrom`, `level`, `createdAt`) VALUES ('{$_REQUEST["email"]}', '{$_REQUEST["firstname"]}', '{$_REQUEST["lastname"]}', '{$_REQUEST["password"]}', '{$_REQUEST["country"]}', '$referralCode', '$referral', 1, now());");
+  $verifyHash = substr(base64_encode(md5($referralCode)), 1, -2);
+  $verifyEmail = $_REQUEST["email"];
+  sql("INSERT INTO `accounts` (`email`, `firstname`, `lastname`, `password`, `country`, `referralCode`, `referralFrom`, `level`, `createdAt`, `verifyHash`) VALUES ('{$_REQUEST["email"]}', '{$_REQUEST["firstname"]}', '{$_REQUEST["lastname"]}', '{$_REQUEST["password"]}', '{$_REQUEST["country"]}', '$referralCode', '$referral', 1, now(), '$verifyHash');");
   $referralEmail = $_REQUEST["email"];
   include("create_referral_png.php");
+  include("sendVerifyHash.php");
   die(json_encode(array("res" => 200, msg => "Success")));
 }
 $d = "";

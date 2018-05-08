@@ -10,6 +10,9 @@ include("lib/functions.php");
 include("lib/db.php");
 
 $account = getOne("select * from `accounts` where `id`=" . $_SESSION["accountid"]);
+
+$baseurl = "{$_SERVER["REQUEST_SCHEME"]}://{$_SERVER["SERVER_NAME"]}/";
+if ($_SERVER["SERVER_NAME"] == "localhost") $baseurl .= "4new/";
 ?>
 <!DOCTYPE html>
 <html>
