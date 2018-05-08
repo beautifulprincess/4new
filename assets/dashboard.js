@@ -32,7 +32,11 @@ $(document).ready(function() {
 		    console.log('Error: ' + xhr.status);
       },
       success: function(response) {
-        console.log(response);
+        $('#emails').val("");
+        $(".send-referrals-btn-label").text("SENT");
+        setTimeout(function() {
+          $(".send-referrals-btn-label").text("SEND INVITES");
+        }, 5000);
       }
 	  });
   });

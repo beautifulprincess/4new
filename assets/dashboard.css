@@ -301,6 +301,7 @@ button {
   border: none;
   width: 100%;
   text-align: center;
+  cursor: pointer;
 }
 .blue {
   background-color: #021b4f;

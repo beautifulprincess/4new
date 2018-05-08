@@ -89,7 +89,7 @@ if ($account["referralFrom"]) {
             <textarea name="message" cols="50" rows="10" id="message">I would like to share with you an amazing opportunity to get in ground floor on the hottest new crytpo asset called TPAY. It is the world’s most secure coin and has been called Bitcoin on Steroids. Register today and receive a 100% bonus on the official token sale on December 7th.</textarea>
           </div>
           <div class="download-btn">
-            <button class="download" id="send-referrals-btn" type="button"><span class="fa fa-envelope"></span> SEND INVITES</button>
+            <button class="download" id="send-referrals-btn" type="button"><span class="fa fa-envelope"></span> <span class="send-referrals-btn-label">SEND INVITES</span></button>
           </div>
         </form>
       </div>
