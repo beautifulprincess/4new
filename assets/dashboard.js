@@ -27,16 +27,19 @@ $(document).ready(function() {
       return;
     }
 
+    $('#loading-container').show();
     $('#referral-form').ajaxSubmit({
       error: function(xhr) {
+        $('#loading-container').hide();
 		    console.log('Error: ' + xhr.status);
       },
       success: function(response) {
         $('#emails').val("");
         $(".send-referrals-btn-label").text("SENT");
+        $('#loading-container').hide();
         setTimeout(function() {
           $(".send-referrals-btn-label").text("SEND INVITES");
-        }, 5000);
+        }, 1000);
       }
 	  });
   });
