@@ -31,6 +31,7 @@ CREATE TABLE `accounts` (
   `referralCode` varchar(8) COLLATE utf8_unicode_ci NOT NULL,
   `referralFrom` varchar(8) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `level` int(1) NOT NULL,
+  `createdAt` datetime,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -38,5 +39,5 @@ CREATE TABLE `accounts` (
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `email`, `firstname`, `lastname`, `password`, `country`, `referralCode`, `referralFrom`, `level`) VALUES
-(1, 'admin@4new.com', 'Super', 'Admin', 'Admin!23', '1', '12345', '', 9);
+INSERT INTO `accounts` (`id`, `email`, `firstname`, `lastname`, `password`, `country`, `referralCode`, `referralFrom`, `level`, `createdAt`) VALUES
+(1, 'admin@4new.com', 'Super', 'Admin', 'Admin!23', '1', '12345', '', 9, now());

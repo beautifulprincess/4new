@@ -11,7 +11,7 @@ if (isset($_REQUEST["action"]) && $_REQUEST["action"] == "signup") {
     $accounts = getAll("select * from accounts where `referralCode`='$referralCode'");
     if (count($accounts) == 0) break;
   } while (true);
-  sql("INSERT INTO `accounts` (`email`, `firstname`, `lastname`, `password`, `country`, `referralCode`, `referralFrom`, `level`) VALUES ('{$_REQUEST["email"]}', '{$_REQUEST["firstname"]}', '{$_REQUEST["lastname"]}', '{$_REQUEST["password"]}', '{$_REQUEST["country"]}', '$referralCode', '$referral', 1);");
+  sql("INSERT INTO `accounts` (`email`, `firstname`, `lastname`, `password`, `country`, `referralCode`, `referralFrom`, `level`, `createdAt`) VALUES ('{$_REQUEST["email"]}', '{$_REQUEST["firstname"]}', '{$_REQUEST["lastname"]}', '{$_REQUEST["password"]}', '{$_REQUEST["country"]}', '$referralCode', '$referral', 1, now());");
   $referralEmail = $_REQUEST["email"];
   include("create_referral_png.php");
   die(json_encode(array("res" => 200, msg => "Success")));
