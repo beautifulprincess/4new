@@ -57,9 +57,9 @@ $mail->msgHTML(preg_replace("/\{\{message\}\}/", $_REQUEST['message'], file_get_
 //$mail->addAttachment('images/phpmailer_mini.png');
 //send the message, check for errors
 if (!$mail->send()) {
-    echo json_encode(array('res' => '300', 'msg' => "Mailer Error: " . $mail->ErrorInfo));
+    // echo json_encode(array('res' => '300', 'msg' => "Mailer Error: " . $mail->ErrorInfo));
 } else {
-    echo json_encode(array('res' => '200', 'msg' => "Message sent!"));
+    // echo json_encode(array('res' => '200', 'msg' => "Message sent!"));
     //Section 2: IMAP
     //Uncomment these to save your message in the 'Sent Mail' folder.
     #if (save_mail($mail)) {
@@ -67,7 +67,7 @@ if (!$mail->send()) {
     #}
 }
 }
-// echo json_encode(array('res' => '200', 'msg' => "Message sent!"));
+echo json_encode(array('res' => '200', 'msg' => "Message sent!"));
 //Section 2: IMAP
 //IMAP commands requires the PHP IMAP Extension, found at: https://php.net/manual/en/imap.setup.php
 //Function to call which uses the PHP imap_*() functions to save messages: https://php.net/manual/en/book.imap.php
