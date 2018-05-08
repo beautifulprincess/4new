@@ -13,10 +13,12 @@ sql("CREATE TABLE `accounts` (
   `referralFrom` varchar(8) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `level` int(1) NOT NULL,
   `createdAt` datetime,
+  `status` int(1) NOT NULL DEFAULT 0,
+  `verifyHash` varchar(256) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;");
-sql("INSERT INTO `accounts` (`id`, `email`, `firstname`, `lastname`, `password`, `country`, `referralCode`, `referralFrom`, `level`, `createdAt`) VALUES
-(1, 'admin@4new.com', 'Super', 'Admin', 'Admin!23', '1', '12345', '', 9, now());");
+sql("INSERT INTO `accounts` (`id`, `email`, `firstname`, `lastname`, `password`, `country`, `referralCode`, `referralFrom`, `level`, `createdAt`, `status`) VALUES
+(1, 'admin@4new.com', 'Super', 'Admin', 'Admin!23', '1', '12345', '', 9, now(), 1);");
 
 exec("rm -rf referrals/*");
 ?>

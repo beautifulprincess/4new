@@ -40,8 +40,8 @@ $account = getOne("select * from `accounts` where `id`=" . $_SESSION["accountid"
   <section>
     <nav>
       <ul>
-        <li class="menu-dashboard" id="menu-dashboard-index">Dashboard</li>
-        <li class="menu-dashboard menu-selected" id="menu-dashboard-social">Social Rewards</li>
+        <li class="menu-dashboard<?php echo $page == "index" ? " menu-selected" : ""; ?>" id="menu-dashboard-index">Dashboard</li>
+        <li class="menu-dashboard<?php echo $page == "social" ? " menu-selected" : ""; ?>" id="menu-dashboard-social">Social Rewards</li>
       </ul>
     </nav>
     <div class="main-container">
