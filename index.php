@@ -64,7 +64,7 @@ if ($_SERVER["SERVER_NAME"] == "localhost") $baseurl .= "4new/"
     <div class="container">
       <img id="home-logo" src="<?=$d?>assets/images/home-logo.png">
       <div id="home-logo-txt">4NEW</div>
-      <div id="home-title">INTRODUCING TO <strong>KWATTCOIN</strong></div>
+      <div id="home-title">INTRODUCING TO <strong>KWATT TOKEN</strong></div>
       <div id="home-subtitle">Decentraiazed solutions</div>
       <div class="row">
         <div class="col col-sm-12 col-md-6">
@@ -103,13 +103,13 @@ if ($_SERVER["SERVER_NAME"] == "localhost") $baseurl .= "4new/"
       <div class="row">
         <div class="col col-sm-12" id="raised-col">
           <div class="raised-title">
-            Over 4.4 million raised
+            Over $42.1 million raised
           </div>
           <div class="raised-bar-back"><div class="raised-bar-progress"></div></div>
           <div class="raised-bar-values">
-            <div class="raised-bar-value raised-var-value-start">$0</div>
-            <div class="raised-bar-value raised-var-value-progress">$4.4million</div>
-            <div class="raised-bar-value raised-var-value-end"></div>
+            <div class="raised-bar-value raised-var-value-start">0 M</div>
+            <div class="raised-bar-value raised-var-value-progress">42.1 M</div>
+            <div class="raised-bar-value raised-var-value-end">75 M</div>
           </div>
         </div>
       </div>

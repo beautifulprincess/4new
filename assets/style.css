@@ -23,6 +23,10 @@
   src: url(webfonts/Montserrat-Thin.ttf);
 }
 @font-face {
+  font-family: "MontserratItalic";
+  src: url(webfonts/Montserrat-Italic.ttf);
+}
+@font-face {
   font-family: "font7";
   src: url(webfonts/Lato-Bold.ttf);
 }

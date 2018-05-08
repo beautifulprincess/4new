@@ -10,6 +10,13 @@ $mycoins = $referralAccountsCnt * 100;
 if ($account["referralFrom"]) {
   $mycoins += 10;
 }
+if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
+  $referralEmail = $account['email'];
+  $referralCode = $account['referralCode'];
+  include("./create_referral_png.php");
+}
+$baseurl = "{$_SERVER["REQUEST_SCHEME"]}://{$_SERVER["SERVER_NAME"]}/";
+if ($_SERVER["SERVER_NAME"] == "localhost") $baseurl .= "4new/"
 ?>
 <div class="container-fluid">
   <h1>SOCIAL REWARDS</h1>
@@ -104,10 +111,10 @@ if ($account["referralFrom"]) {
           </div>
           <h2>Join the TokenPay token sale with this code and receive up to 50% additional TokenPay coins.</h2>
           <h3>Visit TokenPay.com and click Join!</h3>
-          <img src="<?=$d?>assets/images/icons/social-rewards_03.png" alt="">
+          <span class="referral-4new">4NEW</span>
         </div>
         <div class="download-btn">
-          <button class="download download-referral-image"><span class="fa fa-download"></span> Download image</button>
+          <a class="download download-referral-image" href="<?=$baseurl?>referrals/<?=md5($account['email'])?>.png" download="<?=md5($account['email'])?>.png"><span class="fa fa-download"></span> Download image</a>
         </div>
         <div class="row">
           <div class="col-md-6 col-xs-12">
@@ -115,7 +122,7 @@ if ($account["referralFrom"]) {
               <h4>Image embed HTML:</h4>
               <div class="site">
                 <div class="site-name">
-                  <textarea id="copy-embed-html" class="referral-image-html">&lt;a href="<?=$signWithReferralUrl?>"&gt;&lt;img src="https://www.tokenpay.com/referral-images/3b8a508cf5cfc1b6d1cd95cad8747da9.png"
+                  <textarea id="copy-embed-html" class="referral-image-html">&lt;a href="<?=$signWithReferralUrl?>"&gt;&lt;img src="<?=$baseurl?>referrals/<?=md5($account['email'])?>.png"
 alt="TokenPay Signup Offer"/&gt;&lt;/a&gt;</textarea>
                   <button class="site-btn copy-clipboard" for="copy-embed-html"><img src="<?=$d?>assets/images/icons/book_70.png" alt=""></button>
                 </div>
@@ -127,7 +134,7 @@ alt="TokenPay Signup Offer"/&gt;&lt;/a&gt;</textarea>
               <h4>Image embed code:</h4>
               <div class="site">
                 <div class="site-name">
-                  <textarea id="copy-embed-code" class="referral-image-code">[url=<?=$signWithReferralUrl?>][img]<span class="referral-image-link">https://www.tokenpay.com/referral-images/3b8a508cf5cfc1b6d1cd95cad8747da9.png</span>[/img][/url]</textarea>
+                  <textarea id="copy-embed-code" class="referral-image-code">[url=<?=$signWithReferralUrl?>][img]<span class="referral-image-link"><?=$baseurl?>referrals/<?=md5($account['email'])?>.png</span>[/img][/url]</textarea>
                   <button class="site-btn copy-clipboard" for="copy-embed-code"><img src="<?=$d?>assets/images/icons/book_70.png" alt=""></button>
                 </div>
               </div>
