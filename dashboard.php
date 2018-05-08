@@ -1,7 +1,7 @@
 <?php
 session_start();
 $d = "../";
-$page  = isset($_REQUEST['page']) && $_REQUEST['page'] ? $_REQUEST['page'] : "social";
+$page  = isset($_REQUEST['page']) && $_REQUEST['page'] ? $_REQUEST['page'] : "index";
 $option  = isset($_REQUEST['option']) && $_REQUEST['option'] ? $_REQUEST['option'] : "";
 if ($option) $d .= "../";
 if (!$_SESSION["accountid"]) header("Location:{$d}signin");

@@ -73,6 +73,7 @@ footer {
 .copyright {
   color: rgb(28, 97, 135);
   font-size: 14pt;
+  text-align: center;
 }
 .footer-socials a {
   font-size: 60px;

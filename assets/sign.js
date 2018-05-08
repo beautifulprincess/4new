@@ -128,7 +128,7 @@ $(document).ready(function() {
         $('#loading-container').hide();
         if (resp.res == 200) {
           showMessage('success', resp.msg);
-          document.location.href = "dashboard";
+          document.location.href = "socialreword";
         } else {
           showMessage('error', resp.msg);
         }
