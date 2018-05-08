@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  $('#navmenu-btn').click(function() {
+    $('#navmenu').toggleClass('opened');
+  });
   $('.menu-dashboard').click(function() {
     var id = $(this).attr('id');
     var page = id.substring(id.lastIndexOf('-') + 1, id.length);

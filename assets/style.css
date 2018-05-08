@@ -57,7 +57,7 @@ header {
   left: 0;
   background: #2f57a6;
   z-index: 80;
-  min-width: 440px;
+  min-width: 320px;
 }
 footer {
   position: relative;
@@ -105,9 +105,16 @@ footer {
   display: none;
 }
 
-@media(min-width: 992px) {
+@media(min-width: 991px) {
 }
-@media(max-width: 768px) {
+@media(max-width: 767px) {
+  .footer-socials a {
+    font-size: 30px;
+    margin: 0 10px;
+  }
+  .copyright {
+    font-size: 10pt;
+  }
 }
 @media (max-width: 576px) {
 }

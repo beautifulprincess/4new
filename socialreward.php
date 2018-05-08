@@ -69,6 +69,14 @@ if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
       </div>
       <a href="<?php echo $d; ?>signout" class="header-user-signout">Sign out</a>
       <div class="header-user-email"><?=$account["email"]?></div>
+      <div id="navmenu">
+        <div id="navmenu-btn"><div id="navmenu-btn-bar"></div></div>
+        <div id="navmenu-list">
+          <div class="navmenu-item"><a href="dashboard">Dashboard</a></div>
+          <div class="navmenu-item"><a href="special">Special Rewards</a></div>
+          <div class="navmenu-item"><a href="<?php echo $d; ?>signout">Sign out</a></div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -286,7 +294,6 @@ if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
   <!-- Vendor scripts -->
   <script src="<?php echo $d; ?>assets/jquery.min.js"></script>
   <script src="<?php echo $d; ?>assets/jquery.form.min.js"></script>
-  <script src="<?php echo $d; ?>assets/svg.js"></script>
   <script src="<?php echo $d; ?>assets/socialreward.js"></script>
 </body>
 </html>
