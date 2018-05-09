@@ -112,11 +112,11 @@ if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
           <div class="code">
             <h3>JOIN COMMUNITY!</h3>
             <div class="socials">
-              <a href="https://www.facebook.com/tokenpay" title="Facebook TokenPay" target="_blank"><img src="<?=$d?>assets/images/socials/facebook.png" alt=""></a>
-              <a href="https://www.twitter.com/tokenpay" title="Twitter @TokenPay" target="_blank"><img src="<?=$d?>assets/images/socials/twitter.png" alt=""></a>
-              <a href="https://t.me/joinchat/GgZih0NrYt2F11oXwQ11Cg" title="Telegram TokenPay" target="_blank"><img src="<?=$d?>assets/images/socials/telegram.png" alt=""></a>
-              <a href="https://medium.com/tokenpay" target="_blank"><img src="<?=$d?>assets/images/socials/medium.png" alt=""></a>
-              <!-- <a href="https://www.instagram.com/tokenpay/" target="_blank"><img src="<?=$d?>assets/images/icons/social-rewards-2_13.png" alt=""></a> -->
+              <a href="https://www.facebook.com/4newcoin" title="Facebook TokenPay" target="_blank"><img src="<?=$d?>assets/images/socials/facebook.png" alt=""></a>
+              <a href="https://twitter.com/4newcoin" title="Twitter @TokenPay" target="_blank"><img src="<?=$d?>assets/images/socials/twitter.png" alt=""></a>
+              <a href="https://t.me/FRNCoin" title="Telegram TokenPay" target="_blank"><img src="<?=$d?>assets/images/socials/telegram.png" alt=""></a>
+              <a href="https://medium.com/@4newcoin" target="_blank"><img src="<?=$d?>assets/images/socials/medium.png" alt=""></a>
+              <!-- <a href="https://www.instagram.com/4newcoin/" target="_blank"><img src="<?=$d?>assets/images/icons/social-rewards-2_13.png" alt=""></a> -->
             </div>
           </div>
         </div>
