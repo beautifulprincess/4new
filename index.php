@@ -62,9 +62,9 @@ if ($_SERVER["SERVER_NAME"] == "localhost") $baseurl .= "4new/";
     </div>
     <div id="particles-js"></div> -->
     <div class="container">
-      <img id="home-logo" src="<?=$d?>assets/images/home-logo.png">
-      <div id="home-logo-txt">4NEW</div>
-      <div id="home-title">INTRODUCING TO <strong>KWATT TOKEN</strong></div>
+      <a href="https://4new.io/" target="_blank"><img id="home-logo" src="<?=$d?>assets/images/home-logo.png"></a>
+      <div id="home-logo-txt"><a href="https://4new.io/" target="_blank">4NEW</a></div>
+      <div id="home-title">Introducing The <span class="highlight">KWATT Coin</span><br>Tokenized <span class="highlight">Electricity</span></div>
       <div id="home-subtitle">Decentraiazed solutions</div>
       <div class="row">
         <div class="col col-sm-12 col-md-6">
@@ -74,7 +74,7 @@ if ($_SERVER["SERVER_NAME"] == "localhost") $baseurl .= "4new/";
         </div>
         <div class="col col-sm-12 col-md-6">
           <video controls id="index-video2" poster="data:image/gif,AAAA">
-            <source src="<?=$d?>assets/latest-drone.mp4" type="video/mp4">
+            <source src="<?=$d?>assets/video2.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -115,6 +115,14 @@ if ($_SERVER["SERVER_NAME"] == "localhost") $baseurl .= "4new/";
       </div>
     </div>
   </section>
+  <section id="section-buttons">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6"><button class="btn-whitepaper">Whitepaper</button></div>
+        <div class="col-sm-12 col-md-6"><button class="btn-onepager">One Pager</button></div>
+      </div>
+    </div>
+  </section>
   <section id="section-calculator">
     <div id="section-calculator-background"></div>
     <div class="container">
@@ -122,7 +130,7 @@ if ($_SERVER["SERVER_NAME"] == "localhost") $baseurl .= "4new/";
       <div class="row">
         <div class="col col-sm-12 col-md-6">
           <div id="calc-invest">
-            <div class="calc-invest-title">Invest <span class="highlight">50000</span></div>
+            <div class="calc-invest-title">Invest <span class="highlight calc-val-invest">50,000</span></div>
             <div class="calc-slidecontainer">
               <input id="calc-range-val" type="range" min=0 max=200 value=120>
             </div>
@@ -168,8 +176,8 @@ if ($_SERVER["SERVER_NAME"] == "localhost") $baseurl .= "4new/";
       <div class="row">
         <div class="col col-sm-12">
           <a href="#" class="get-your-bonus">GET YOUR BONUS NOW!</a>
-          <a href="<?=$baseurl?>signup" class="link-join-our-affleate">Join our affleate</a>
-          <p class="link-after-text">And take part of our experiances</p>
+          <a href="<?=$baseurl?>signup" class="link-join-our-affleate">Join our Affiliate Program</a>
+          <p class="link-after-text">And be a part of our journey</p>
         </div>
       </div>
     </div>

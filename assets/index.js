@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var y1 = 400000, y2 = 820000, y3 = 1640000, y4 = 3075000, y5 = 6150000;
+  var y1 = 400000, y2 = 820000, y3 = 1640000, y4 = 3075000, y5 = 6150000, iv = 50000;
   function val2view(v) {
     var sv = v.toString();
     var s = sv.substring(sv.length - 3, sv.length);
@@ -33,6 +33,7 @@ $(document).ready(function() {
     $(".calc-graph-val.calc-val-year3").css({bottom: 450 * v3 / y5});
     $(".calc-graph-val.calc-val-year4").css({bottom: 450 * v4 / y5});
     $(".calc-graph-val.calc-val-year5").css({bottom: 450 * v5 / y5});
+    $(".calc-val-invest").text(val2view(iv * range / 200));
   }
   $('#calc-range-val').on("input", updageRange);
   updageRange();
@@ -62,4 +63,10 @@ $(document).ready(function() {
   }
   resizeCalc();
   $(window).resize(resizeCalc);
+  $(".btn-whitepaper").click(function() {
+    window.open("https://4new.io/wp-content/uploads/2018/04/4New-WhitePaper_.pdf", "_blank");
+  });
+  $(".btn-onepager").click(function() {
+    window.open("https://4new.io/wp-content/uploads/2018/04/4New_1.pdf", "_blank");
+  });
 });

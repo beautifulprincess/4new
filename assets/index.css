@@ -27,10 +27,17 @@ header {
   font-size: 25pt;
   margin-top: 10px;
 }
+#home-logo-txt a {
+  color: #fff;
+}
+#home-logo-txt a:hover {
+  color: #fff;
+}
 #home-title {
   font-family: 'font5';
   font-size: 28pt;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 #home-subtitle {
   font-family: 'font5';
@@ -39,6 +46,7 @@ header {
   letter-spacing: 4px;
   color: #aaa;
   text-transform: uppercase;
+  display: none;
 }
 #video-container {
   position: absolute;
@@ -117,7 +125,7 @@ header {
   width: 70%;
   height: 24px;
   max-width: 600px;
-  background-color: rgb(126, 192, 66);
+  background-color: #7dc242;
   margin: 30px auto 10px;
 }
 .raised-bar-progress {
@@ -207,7 +215,7 @@ header {
   color: #fff;
 }
 .highlight {
-  color: rgb(126, 192, 66) !important;
+  color: #7dc242 !important;
 }
 #calc-range-val {
   -webkit-appearance: none;  /* Override default CSS styles */
@@ -223,13 +231,13 @@ header {
   appearance: none;
   width: 10px;
   height: 30px;
-  background: rgb(126, 192, 66);
+  background: #7dc242;
   cursor: pointer;
 }
 #calc-range-val::-moz-range-thumb {
   width: 10px;
   height: 30px;
-  background: rgb(126, 192, 66);
+  background: #7dc242;
   cursor: pointer;
 }
 .calc-invest-vals-title {
@@ -250,7 +258,7 @@ header {
 }
 #calc-invest table tr td:last-child {
   text-align: right;
-  color: rgb(126, 192, 66);
+  color: #7dc242;
 }
 #calc-invest hr {
   background: #fff;
@@ -274,7 +282,7 @@ header {
   font-size: 8pt;
 }
 .calc-click-here a {
-  color: rgb(126, 192, 66);
+  color: #7dc242;
   text-decoration: none;
 }
 .col #calc-graph {
@@ -294,13 +302,13 @@ header {
   position: relative;
   width: 100%;
   height: 480px;
-  border-bottom: 1px solid rgb(126, 192, 66);
+  border-bottom: 1px solid #7dc242;
 }
 .calc-graph-item {
   position: absolute;
   width: calc(20% - 20px);
   bottom: 0;
-  background-color: rgb(126, 192, 66);
+  background-color: #7dc242;
 }
 #calc-graph-year1 {
   left: 10px;
@@ -354,7 +362,7 @@ header {
   width: 60%;
   max-width: 400px;
   line-height: 40px;
-  background-color: rgb(126, 192, 66);
+  background-color: #7dc242;
   color: #fff;
   margin: 80px auto 0px;
 }
@@ -363,7 +371,7 @@ header {
 }
 .link-join-our-affleate {
   font-family: 'font5';
-  font-size: 26pt;
+  font-size: 22pt;
   font-weight: bold;
   display: block;
   width: 70%;
@@ -397,4 +405,40 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+#section-buttons {
+  text-align: center;
+  background-color: rgb(28, 97, 135);
+  padding: 40px 0;
+}
+#section-buttons button{
+  width: 300px;
+  height: 80px;
+  color: #7dc242;
+  border: none;
+  margin: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-size: 30px;
+}
+#section-buttons button.btn-whitepaper {
+  background-color: #fff;
+  background-image: url(images/white-paper.png);
+  background-repeat: no-repeat;
+  background-size: auto 36px;
+  background-position: 30px center;
+  color: rgb(28, 97, 135);
+  padding-left: 50px;
+}
+#section-buttons button.btn-onepager {
+  background-color: rgb(28, 97, 135);
+  background-image: url(images/one-pager.png);
+  background-repeat: no-repeat;
+  background-size: auto 36px;
+  background-position: 40px center;
+  color: #fff;
+  padding-left: 60px;
+}
+#section-buttons button:focus {
+  outline: none;
 }
