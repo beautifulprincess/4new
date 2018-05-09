@@ -112,10 +112,10 @@ if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
           <div class="code">
             <h3>JOIN COMMUNITY!</h3>
             <div class="socials">
-              <a href="https://www.facebook.com/4newcoin" title="Facebook TokenPay" target="_blank"><img src="<?=$d?>assets/images/socials/facebook.png" alt=""></a>
-              <a href="https://twitter.com/4newcoin" title="Twitter @TokenPay" target="_blank"><img src="<?=$d?>assets/images/socials/twitter.png" alt=""></a>
-              <a href="https://t.me/FRNCoin" title="Telegram TokenPay" target="_blank"><img src="<?=$d?>assets/images/socials/telegram.png" alt=""></a>
-              <a href="https://medium.com/@4newcoin" target="_blank"><img src="<?=$d?>assets/images/socials/medium.png" alt=""></a>
+              <a href="https://www.facebook.com/4newcoin" title="Facebook 4NEW" target="_blank"><img src="<?=$d?>assets/images/socials/facebook.png" alt=""></a>
+              <a href="https://twitter.com/4newcoin" title="Twitter 4NEW" target="_blank"><img src="<?=$d?>assets/images/socials/twitter.png" alt=""></a>
+              <a href="https://t.me/FRNCoin" title="Telegram 4NEW" target="_blank"><img src="<?=$d?>assets/images/socials/telegram.png" alt=""></a>
+              <a href="https://medium.com/@4newcoin" title="Medium 4NEW" target="_blank"><img src="<?=$d?>assets/images/socials/medium.png" alt=""></a>
               <!-- <a href="https://www.instagram.com/4newcoin/" target="_blank"><img src="<?=$d?>assets/images/icons/social-rewards-2_13.png" alt=""></a> -->
             </div>
           </div>
@@ -136,10 +136,10 @@ if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
             <h3>Share Your Referral Code!</h3>
             <div class="socials">
               <a href="https://www.facebook.com/sharer/sharer.php?u=<?=$signWithReferralUrl?>" target="_blank"><img src="<?=$d?>assets/images/socials/facebook.png" alt=""></a>
-              <a href="http://twitter.com/share?text=Register+for+The+TokenPay+Coin+Sale+-+TokenPay+is+Bitcoin+on+Steroids%21&amp;url=<?=$signWithReferralUrl?>" target="_blank"><img src="<?=$d?>assets/images/socials/twitter.png" alt=""></a>
-              <a href="whatsapp://send?text=Register+for+The+TokenPay+Coin+Sale+-+TokenPay+is+Bitcoin+on+Steroids%21<?=urlencode($signWithReferralUrl)?>" target="_blank" data-action="share/whatsapp/share"><img src="<?=$d?>assets/images/socials/whatsup.png" alt=""></a>
+              <a href="http://twitter.com/share?text=Register+for+The+4NEW+Coin+Sale+-+4NEW+is+Bitcoin+on+Steroids%21&amp;url=<?=$signWithReferralUrl?>" target="_blank"><img src="<?=$d?>assets/images/socials/twitter.png" alt=""></a>
+              <a href="whatsapp://send?text=Register+for+The+4NEW+Coin+Sale+-+4NEW+is+Bitcoin+on+Steroids%21<?=urlencode($signWithReferralUrl)?>" target="_blank" data-action="share/whatsapp/share"><img src="<?=$d?>assets/images/socials/whatsup.png" alt=""></a>
               <a href="https://www.facebook.com/sharer/sharer.php?u=<?=$signWithReferralUrl?>" target="_blank"><img src="<?=$d?>assets/images/socials/messenger.png" alt=""></a>
-              <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<?=$signWithReferralUrl?>&amp;title=Register+for+The+TokenPay+Coin+Sale+-+TokenPay+is+Bitcoin+on+Steroids%21" target="_blank"><img src="<?=$d?>assets/images/socials/linkedin.png" alt=""></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<?=$signWithReferralUrl?>&amp;title=Register+for+The+4NEW+Coin+Sale+-+4NEW+is+Bitcoin+on+Steroids%21" target="_blank"><img src="<?=$d?>assets/images/socials/linkedin.png" alt=""></a>
             </div>
           </div>
         </div>
@@ -188,7 +188,7 @@ if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
                   <h4>Image embed HTML:</h4>
                   <div class="site">
                     <div class="site-name">
-                      <textarea id="copy-embed-html" class="referral-image-html">&lt;a href="<?=$signWithReferralUrl?>"&gt;&lt;img src="<?=$baseurl?>referrals/<?=md5($account['email'])?>.png" alt="TokenPay Signup Offer"/&gt;&lt;/a&gt;</textarea>
+                      <textarea id="copy-embed-html" class="referral-image-html">&lt;a href="<?=$signWithReferralUrl?>"&gt;&lt;img src="<?=$baseurl?>referrals/<?=md5($account['email'])?>.png" alt="4NEW Signup Offer"/&gt;&lt;/a&gt;</textarea>
                       <button class="site-btn copy-clipboard" for="copy-embed-html"><img src="<?=$d?>assets/images/copy.png" alt="" width=21px height=25px></button>
                     </div>
                   </div>

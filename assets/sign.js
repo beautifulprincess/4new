@@ -100,6 +100,10 @@ $(document).ready(function() {
 	  });
   });
 
+  $('#password').keydown(function(event) {
+    if (event.keyCode == 13)
+      $('#frm-signin .btn-submit').click();
+  });
   $('#frm-signin .btn-submit').click(function() {
     if ($('#email').val().trim() == '') {
       $('#email').select();

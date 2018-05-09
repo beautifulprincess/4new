@@ -42,10 +42,10 @@ header {
   color: rgb(0, 73, 145);
 }
 .header-menu.menu-dashboard {
-  background-image: url(images/dashboard.png);
+  background-image: url(images/dashboard-white.png);
 }
 .header-menu.menu-special {
-  background-image: url(images/special.png);
+  background-image: url(images/special-white.png);
 }
 .header-menu:hover {
   text-decoration: none;
