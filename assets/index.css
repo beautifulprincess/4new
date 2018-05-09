@@ -134,7 +134,7 @@ header {
   height: 100%;
   left: 0;
   top: 0;
-  background-color: rgb(28, 97, 135);
+  background-color: rgb(0, 73, 145);
 }
 .raised-bar-values {
   position: relative;
@@ -181,7 +181,7 @@ header {
   right: 0;
   height: 400px;
   width: 100vw;
-  background-color: rgb(28, 97, 135);
+  background-color: rgb(0, 73, 145);
 }
 #section-calculator-background:after {
   content: '';
@@ -190,7 +190,7 @@ header {
   right: 0;
   height: 0;
   width: 0;
-  border-left: 100vw solid rgb(28, 97, 135);
+  border-left: 100vw solid rgb(0, 73, 145);
   border-bottom: 300px solid transparent;
 }
 .calculator-title {
@@ -204,7 +204,7 @@ header {
 .col #calc-invest {
   margin-top: 40px;
   width: 100%;
-  background-color: rgb(28, 97, 135);
+  background-color: rgb(0, 73, 145);
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
   padding: 40px 20px 60px;
   min-height: 700px;
@@ -294,7 +294,7 @@ header {
   min-height: 700px;
 }
 .calc-graph-title {
-  color: rgb(28, 97, 135);
+  color: rgb(0, 73, 145);
   font-family: 'font5';
   font-size: 24pt;
 }
@@ -378,7 +378,7 @@ header {
   max-width: 500px;
   line-height: 50px;
   background-color: #fff;
-  color: rgb(28, 97, 135);
+  color: rgb(0, 73, 145);
   margin: 60px auto 0;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
@@ -386,7 +386,7 @@ header {
 .link-after-text {
   font-family: 'font5';
   font-size: 24pt;
-  color: rgb(28, 97, 135);
+  color: rgb(0, 73, 145);
   margin-top: 30px;
 }
 a:hover {
@@ -408,7 +408,7 @@ a:hover {
 }
 #section-buttons {
   text-align: center;
-  background-color: rgb(28, 97, 135);
+  background-color: rgb(0, 73, 145);
   padding: 40px 0;
 }
 #section-buttons button{
@@ -420,6 +420,7 @@ a:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   font-size: 30px;
+  cursor: pointer;
 }
 #section-buttons button.btn-whitepaper {
   background-color: #fff;
@@ -427,11 +428,11 @@ a:hover {
   background-repeat: no-repeat;
   background-size: auto 36px;
   background-position: 30px center;
-  color: rgb(28, 97, 135);
+  color: rgb(0, 73, 145);
   padding-left: 50px;
 }
 #section-buttons button.btn-onepager {
-  background-color: rgb(28, 97, 135);
+  background-color: rgb(0, 73, 145);
   background-image: url(images/one-pager.png);
   background-repeat: no-repeat;
   background-size: auto 36px;

@@ -56,11 +56,11 @@ if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
       <div class="coins-status">
         <div class="coins-st-item coin-st-kwatt">
           <div class="coins-st-name">KWATT Token price</div>
-          <div class="coins-st-value">$2.47 USD</div>
+          <div class="coins-st-value">$2 USD</div>
         </div>
         <div class="coins-st-item coin-st-24h">
           <div class="coins-st-name">24 hr change</div>
-          <div class="coins-st-value"><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i>+3.47%</div>
+          <div class="coins-st-value"><i class="fa fa-caret-up"></i><i class="fa fa-caret-down" style="display: none;"></i>+3.47%</div>
         </div>
         <div class="coins-st-item coin-st-btc">
           <div class="coins-st-name">1 BTC price</div>
@@ -83,13 +83,13 @@ if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
   <section>
     <div class="container">
       <h1>SOCIAL REWARDS</h1>
-      <h3>ANNOUNCEMENTS <em>Token Sale Begins December 7th 10AM EST (NYC Time)</em></h3>
+      <h3>ANNOUNCEMENTS <em>Token Sale Begins June 1st 10AM GMT+0</em></h3>
       <hr>
       <div class="row margin-top-20">
         <div class="col-md-8 col-xs-12">
           <div class="refer">
             <h4>Refer a Friend</h4>
-            <p>Get a unique referral link and share it with your friends to earn free TPAY. When a friend uses your link, you will receive up to 100% bonus awarded in TPAY.</p>
+            <p>Get a unique referral link and share it with your friends to earn free KWATT. When a friend uses your link, you will receive up to 100% bonus awarded in KWATT.</p>
           </div>
         </div>
         <div class="col-md-4 col-xs-12 text-center">
@@ -161,7 +161,7 @@ if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
               </div>
               <div class="form-group">
                 <label for="message">Message:</label>
-                <textarea name="message" cols="50" rows="10" id="message">I would like to share with you an amazing opportunity to get in ground floor on the hottest new crytpo asset called TPAY. It is the world’s most secure coin and has been called Bitcoin on Steroids. Register today and receive a 100% bonus on the official token sale on December 7th.</textarea>
+                <textarea name="message" cols="50" rows="10" id="message">I would like to share with you an amazing opportunity to get in ground floor on the hottest new crytpo asset called KWATT. It is the world’s most secure coin and has been called Bitcoin on Steroids. Register today and receive a 100% bonus on the official token sale on June 1st.</textarea>
               </div>
               <button class="sendinvite-btn" id="send-referrals-btn" type="button"><span class="send-referrals-btn-label">SEND INVITES</span></button>
             </form>
@@ -189,7 +189,7 @@ if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
                   <div class="site">
                     <div class="site-name">
                       <textarea id="copy-embed-html" class="referral-image-html">&lt;a href="<?=$signWithReferralUrl?>"&gt;&lt;img src="<?=$baseurl?>referrals/<?=md5($account['email'])?>.png" alt="TokenPay Signup Offer"/&gt;&lt;/a&gt;</textarea>
-                      <button class="site-btn copy-clipboard" for="copy-embed-html"><img src="<?=$d?>assets/images/icons/book_70.png" alt=""></button>
+                      <button class="site-btn copy-clipboard" for="copy-embed-html"><img src="<?=$d?>assets/images/copy.png" alt="" width=21px height=25px></button>
                     </div>
                   </div>
                 </div>
@@ -200,7 +200,7 @@ if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
                   <div class="site">
                     <div class="site-name">
                       <textarea id="copy-embed-code" class="referral-image-code">[url=<?=$signWithReferralUrl?>][img]<span class="referral-image-link"><?=$baseurl?>referrals/<?=md5($account['email'])?>.png</span>[/img][/url]</textarea>
-                      <button class="site-btn copy-clipboard" for="copy-embed-code"><img src="<?=$d?>assets/images/icons/book_70.png" alt=""></button>
+                      <button class="site-btn copy-clipboard" for="copy-embed-code"><img src="<?=$d?>assets/images/copy.png" alt="" width=21px height=25px></button>
                     </div>
                   </div>
                 </div>
@@ -229,7 +229,7 @@ if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
             <tr class="">
               <td><?=$referrer['firstname']?> <?=$referrer['lastname']?></td>
               <td><?=substr($referrer['createdAt'], 0, 10)?></td>
-              <td>100</td>
+              <td>100 <img src="<?=$d?>assets/images/token.png"></td>
             </tr>
             <?php } ?>
           </tbody>
@@ -248,43 +248,30 @@ if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
             </tr>
             <tr>
               <td style="width:20%">Week 1</td>
-              <td style="width:45%">December 7th to 14th</td>
+              <td style="width:45%">MAY 10th to 17th</td>
               <td style="width:20%">100%</td>
               <td style="width:15%">100%</td>
             </tr>
             <tr>
               <td style="width:20%">Week 2</td>
-              <td style="width:45%">December 15th to 21st</td>
-              <td style="width:20%">50%</td>
-              <td style="width:15%">50%</td>
+              <td style="width:45%">MAY 18th to 25th</td>
+              <td style="width:20%">75%</td>
+              <td style="width:15%">75%</td>
             </tr>
             <tr>
               <td style="width:20%">Week 3</td>
-              <td style="width:45%">December 21th to 27th</td>
+              <td style="width:45%">MAY 26th to 31st</td>
               <td style="width:20%">50%</td>
               <td style="width:15%">50%</td>
-            </tr>
-            <tr>
-              <td style="width:20%">Week 4</td>
-              <td style="width:45%">December 28th to January 3rd</td>
-              <td style="width:20%">50%</td>
-              <td style="width:15%">50%</td>
-            </tr>
-            <tr>
-              <td style="width:20%">Week 5</td>
-              <td style="width:45%">January 4th to January 10th</td>
-              <td style="width:20%">25%</td>
-              <td style="width:15%">25%</td>
-            </tr>
-            <tr>
-              <td style="width:20%">Week 6</td>
-              <td style="width:45%">January 11th to January 17th</td>
-              <td style="width:20%">10%</td>
-              <td style="width:15%">20%</td>
             </tr>
           </tbody>
         </table>
         <h6>All times UTC</h6>
+        <div class="note-div">
+          <p>Please note, the above mentioned bonus structure is in addition to the bonuses offered on the main website at <a href="https://4new.io">4new.io</a>.</p>
+          <p>Purchaser Bonus will be earned by purchaser using the affiliate link.</p>
+          <p>Referral Bonus will be earned by the referrer sharing the referral link with purchasers.</p>
+        </div>
       </div>
     </div>
   </section>

@@ -5,8 +5,11 @@ if (!isset($referralEmail) || !$referralEmail) {
   header("Content-Type: image/png");
 }
 $stamp = @imagecreatetruecolor(350, 320) or die("Cannot Initialize new GD image stream");
-$bg_color = imagecolorallocate($stamp, 28, 97, 135);
-imagefilledrectangle($stamp, 0, 0, 350, 320, $bg_color);
+
+$white = imagecolorallocate($stamp, 255, 255, 255);
+$blue = imagecolorallocate($stamp, 0, 73, 145);
+$lightblue = imagecolorallocate($stamp, 54, 184, 255);
+imagefilledrectangle($stamp, 0, 0, 350, 320, $blue);
 
 $im1 = imagecreatefrompng('assets/images/mark2.png');
 $background = imagecolorallocatealpha($im1, 255, 255, 255, 127);
@@ -30,9 +33,6 @@ imagesavealpha($stamp, TRUE);
 // imagecopymerge($stamp, $im2, 120, 270, 0, 0, imagesx($im2), imagesy($im2), 100);
 imagecopyresized($stamp, $im2, 120, 280, 0, 0, 30, 30, 30, 30);
 
-$white = imagecolorallocate($stamp, 255, 255, 255);
-$blue = imagecolorallocate($stamp, 28, 97, 135);
-$lightblue = imagecolorallocate($stamp, 54, 184, 255);
 imagefilledrectangle($stamp, 75, 75, 275, 175, $white);
 
 imagesavealpha($dimg, true);
