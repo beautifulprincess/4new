@@ -18,6 +18,7 @@ header {
   width: 30px;
   height: 30px;
   margin: 10px 0;
+  cursor: pointer;
 }
 #logo-text {
   display: block;
@@ -28,6 +29,7 @@ header {
   font-size: 20px;
   font-family: 'font4';
   color: rgb(0, 73, 145);
+  cursor: pointer;
 }
 .header-menu {
   display: block;

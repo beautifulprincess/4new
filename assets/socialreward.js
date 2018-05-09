@@ -46,4 +46,7 @@ $(document).ready(function() {
       }
 	  });
   });
+  $('#header-logo, #logo-text').click(function() {
+    window.open('https://4new.io', '_blank');
+  });
 });
