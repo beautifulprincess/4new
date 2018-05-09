@@ -118,7 +118,6 @@ h5 {
   margin: 0px;
 }
 h6 {
-  font-family: "font2";
   color: #484848;
   font-size: 9pt;
   text-align: left;
@@ -206,7 +205,6 @@ p {
   margin-top: 0;
 }
 .code span {
-  font-family: "font1";
   color: rgb(28, 97, 135);
   font-size: 30pt;
   line-height: 76px;
@@ -237,7 +235,6 @@ p {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #fff;
-  font-family: "font3";
   font-size: 10pt;
   color: #222222;
   height: 34px;
@@ -248,7 +245,7 @@ p {
   text-align: left;
 }
 .site-name input {
-  width: 100%;
+  width: calc(100% - 60px);
   height: 100%;
   border: 0;
 }
@@ -331,7 +328,6 @@ hr.margin-30 {
   height: 40px;
   line-height: 40px;
   color: #fff;
-  font-family: "font1";
   font-size: 10pt;
   border: none;
   background-color: rgb(126, 192, 66);
@@ -381,7 +377,6 @@ hr.margin-30 {
   margin-left: auto;
 }
 .blue h2 {
-  font-family: "font3";
   font-size: 9pt;
   color: #fff;
   margin: 0px;
@@ -415,19 +410,17 @@ hr.margin-30 {
   margin-left: auto !important;
 }
 .ref-code span {
-  font-family: "font4";
+  font-family: 'font4';
   font-size: 40px;
   color: rgb(28, 97, 135);
   margin-bottom: 10px;
 }
 .ref-code h6 {
-  font-family: "font1";
   font-size: 10px;
   color: rgb(28, 97, 135);
   margin: 0px;
 }
 .blue h2 {
-  font-family: "font3";
   font-size: 9pt;
   color: #fff;
   margin: 0px;
@@ -435,9 +428,8 @@ hr.margin-30 {
   width: auto;
 }
 .blue h3 {
-  font-family: "font1";
   font-size: 10pt;
-  color: #00aeef;
+  color: rgb(54, 184, 255);
   margin-top: 15px;
   margin-bottom: 15px;
   line-height: 14pt;
