@@ -51,8 +51,8 @@ if (!file_exists("./referrals/" . md5($account['email']) . ".png")) {
     <div class="container">
       <img id="header-logo" src="<?php echo $d; ?>assets/images/home-logo.png" />
       <div id="logo-text">4NEW</div>
-      <a href="dashboard" class="header-menu menu-dashboard">Dashboard</a>
-      <a href="special" class="header-menu menu-special">Special Rewards</a>
+      <a href="https://4new.io" class="header-menu menu-dashboard">Dashboard</a>
+      <a href="#" class="header-menu menu-social">Social Rewards</a>
       <div class="coins-status">
         <div class="coins-st-item coin-st-kwatt">
           <div class="coins-st-name">KWATT Token price</div>
