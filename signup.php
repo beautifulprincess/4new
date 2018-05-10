@@ -59,7 +59,7 @@ if ($referral) $d = "../";
             <select name="country" id="country"></select>
             <label>
               <input type="checkbox" id="agree" />
-              I certify that I am not a citizen or resident of the United States or any of its territories including Puerto Rico, Guam, Northern Mariana Islands, the U.S. Virgin Islands, and American Samoa. I understand that participation in this token sale by a citizen or resident of the United States or any of its aforementioned territories is not permitted by TokenPay.
+              I certify that I am not a citizen or resident of the United States or any of its territories including Puerto Rico, Guam, Northern Mariana Islands, the U.S. Virgin Islands, and American Samoa. I understand that participation in this token sale by a citizen or resident of the United States or any of its aforementioned territories is not permitted by 4NEW.
             </label>
             <div class="g-recaptcha" data-sitekey="6Le9j1cUAAAAAIohkeM5WjH4SwEhjs5csrHxI8sq"></div>
             <div class="frm-message"></div>
